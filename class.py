@@ -5,6 +5,5 @@ class Esemeny:
         self.name = name
         self.address = address
         self.price = price
-    #def __init__(self,datenow)
-     #   self.datenow = Esemeny.date -     
-   
+    def datedifference(self, d1 , d2):
+        d1 = Esemeny.date() 
