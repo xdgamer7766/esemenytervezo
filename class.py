@@ -1,6 +1,10 @@
+import datetime
 class Esemeny:
     def __init__(self,date,name,address,price):
-        self.date = Esemeny_datum
-        self.name = Esemeny_nev
-        self.address = Esemeny_cim
-        self.price = Esemeny_ar
+        self.date = date
+        self.name = name
+        self.address = address
+        self.price = price
+    #def __init__(self,datenow)
+     #   self.datenow = Esemeny.date -     
+   
