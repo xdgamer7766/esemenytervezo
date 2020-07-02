@@ -12,6 +12,6 @@ class Esemeny:
             return (d1 - d2)
         else:
             return(False)
-    def stringconverter(self):
+    def convertToString(self):
         return ".".join([self.date,self.name,self.address,self.price])
 
