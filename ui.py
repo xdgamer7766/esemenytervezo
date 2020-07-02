@@ -31,7 +31,7 @@ while True:
         continue
     
     if option == '1':
-        print(getEventDisplayStr()
+        print(getEventDisplayStr())
         # Todo: Wait for more input, multiple pages, 5 items per page, sorted by date
     if option == '2':
         #Todo: add event ui
