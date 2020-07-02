@@ -1,4 +1,13 @@
 from esemeny_class import Esemeny
+
+def saveToFile(self, filename, esemenyek):
+    data = ""
+    for i in esemenyek:
+        data += i.convertToString()
+        data += ';' 
+    f = open(filename, 'w')
+    f.write(data)
+
 def loadFromFile(filename):
     f = open(filename)
     # Letisztítjuk a szöveget és eltároljuk a contentben
@@ -31,3 +40,4 @@ def loadFromFile(filename):
     #Esemény tömb visszaadása
     return esemenyarr
         
+
