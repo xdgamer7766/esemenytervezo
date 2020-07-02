@@ -30,3 +30,14 @@ while True:
         print('Hibás választás!')
         continue
     
+    if option == '1':
+        print(getEventDisplayStr()
+        # Todo: Wait for more input, multiple pages, 5 items per page, sorted by date
+    if option == '2':
+        #Todo: add event ui
+        ...
+    if option == '3':
+        #Todo: Get event id and remove based on that.
+        ...
+    if option == '4':
+        break
