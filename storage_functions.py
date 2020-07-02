@@ -14,6 +14,10 @@ def loadFromFile(filename):
 
     # darabonként átmegyünk rajta, felbontjuk, és elkiszítjük az esemény objektumot.
     for esemenystr in esemenystrs:
+        # Biztonsági ellenőrzés h ne legyen üres az esemenystr (ha üres, skippeli a többi kódot)
+        if esemenystr.strip() == '':
+            continue
+
         # Esemény string feldarabolása
         properties = esemenystr.split(".")
 
