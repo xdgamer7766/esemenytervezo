@@ -10,3 +10,7 @@ def createEsemeny(date,name,address,price):
     # Hozzáadjuk az objektumot az esemenyek változóba.
     esemenyek += [esemeny]
     
+def delEsemeny(self,id,filename):
+    global esemenyek
+    del esemenyek[id]
+    self.saveToFile(filename,esemenyek)
