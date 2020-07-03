@@ -1,0 +1,2 @@
+UI_DASH_COUNT = 75
+UI_DASH_CHARS = '-'
