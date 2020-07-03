@@ -7,22 +7,17 @@ print('3) Esemény törlése')
 print('4) Kilépés')
 print('-'*dashes)
 
-def saveEventsToFile():
-    ...
-    #Todo
 
-def getEventDisplayStr():
+def decorateStr(s):
     ...
-    #Todo
 
-def addEventToList():
+def getMenuView(items):
     ...
-    #Todo
-def deleteEvent():
-    ...
-    #Todo
 
-while True:
+
+
+
+while False:
     option = input('Választás: ')
     available_options = ['1','2','3','4']
     # Ha a kiválasztott opció nincs benne a available_options tömbbe, nem folytatjuk a loop-ot, az elejére megyünk, és ujra megkérdezzük.
