@@ -10,7 +10,7 @@ def createEsemeny(date,name,address,price):
     esemeny = Esemeny(date,name,address,price)
     # Hozzáadjuk az objektumot az esemenyek változóba.
     esemenyek += [esemeny]
-    
+
 def delEsemeny(id,filename):
     global esemenyek
     del esemenyek[id]
