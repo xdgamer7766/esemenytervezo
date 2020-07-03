@@ -9,6 +9,10 @@ def decorateStr(s):
 def getMenuView(items):
     menuStr = ''
     for ind,item in enumerate(items):
-        menuStr += f'{ind+1}) {item}'
+        menuStr += f'{ind+1}) {item}\n'
 
     return decorateStr(menuStr)
+
+options = ['Események megtekintése','Esemény hozzáadása','Esemény törlése','Kilépés']
+
+print(getMenuView(options))
