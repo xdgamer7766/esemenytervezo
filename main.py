@@ -23,13 +23,21 @@ print(getMenuView(options))
 
 fmenu = int(input()) - 1
 
-if fmenu == 1:
-    print(decorateStr(options[fmenu]))    
+if fmenu == 0:
+    print(decorateStr(options[fmenu]))
+    id = 0    
     for i in esemenyek:
-        print(i.name)
+        print(getMenuView(esemenyek[id].name))
+    print("További információkért írja be az esemény sorszámát")
+    id = int(input())
+    print(f"(esemenyek[id].name)\n\t(esemenyek[id].date)\n\t(esemenyek[id].address)\n\t(esemenyek[id].price)")   
+    print("debug message")
+if fmenu == 1:
+    print(decorateStr(options[fmenu]))
+    print("debug message")
 if fmenu == 2:
     print(decorateStr(options[fmenu]))
+    print("debug message")
 if fmenu == 3:
     print(decorateStr(options[fmenu]))
-if fmenu == 4:
-    print(decorateStr(options[fmenu]))
+    print("debug message")
