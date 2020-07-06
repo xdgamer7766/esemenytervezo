@@ -17,6 +17,14 @@ def delEsemeny(id,filename):
     del esemenyek[id]
     #saveToFile(filename, esemenyek)
 
+#debugging
+
+createEsemeny('2077-6-20','ANYUUUUU','valahol a világban',2500)
+createEsemeny('2020-7-5','APUUUUUUU','máshol a világban',3500)
+createEsemeny('2018-8-8','ÉHESVAGYOK','harmadhelyen a világban',10000)
+
+
+#debugging
 options = ['Események megtekintése','Esemény hozzáadása','Esemény törlése','Kilépés']
 
 print(getMenuView(options))
@@ -27,14 +35,15 @@ if fmenu == 0:
     print(decorateStr(options[fmenu]))
     ujtomb= []   
     for esemeny in esemenyek:
-       ujtomb += esemeny.name
+       ujtomb += [esemeny.name]    
     print(getMenuView(ujtomb))
     print("További információkért írja be az esemény sorszámát")
     id = int(input())
-    print(f"{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}")   
+    print(decorateStr(f"\n{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}\n\t"))   
     print("debug message")
 if fmenu == 1:
     print(decorateStr(options[fmenu]))
+    
     print("debug message")
 if fmenu == 2:
     print(decorateStr(options[fmenu]))
