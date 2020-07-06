@@ -12,7 +12,3 @@ def getMenuView(items):
         menuStr += f'{ind+1}) {item}\n'
 
     return decorateStr(menuStr)
-
-options = ['Események megtekintése','Esemény hozzáadása','Esemény törlése','Kilépés']
-
-print(getMenuView(options))
