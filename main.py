@@ -34,6 +34,9 @@ print(getMenuView(options))
 
 fmenu = int(input()) - 1
 
+
+
+#Események megtekintése
 if fmenu == 0:
     print(decorateStr(options[fmenu]))
     ujtomb= []   
@@ -44,6 +47,10 @@ if fmenu == 0:
     id = int(input())
     print(decorateStr(f"\n{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}\n\t"))   
     print("debug message")
+
+
+
+#Esemény hozzáadása
 if fmenu == 1:
     print(decorateStr(options[fmenu]))  
     esemeny_nev = input("Adja meg az esemény nevét")
@@ -52,11 +59,18 @@ if fmenu == 1:
     esemeny_jegyar = input("Adja meg a jegyárat")
     createEsemeny(esemeny_idopont,esemeny_nev,esemeny_helyszin,esemeny_jegyar)
     print("debug message")
+
+
+#Esemény törlése
 if fmenu == 2:
     print(decorateStr(options[fmenu]))
     delid = input("Adja meg a törlendő esemény sorszámát") -1
     delEsemeny(delid)
     print("debug message")
+
+
+
+#Kilépés
 if fmenu == 3:
     print(decorateStr(options[fmenu]))
     print("debug message")
