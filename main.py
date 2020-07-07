@@ -1,9 +1,10 @@
 from esemeny_class import Esemeny
-from storage_functions import saveToFile
+from storage_functions import saveToFile,loadFromFile
 from ui import *
 from config import MAIN_SAVE_LOCATION
 
-esemenyek = []
+
+esemenyek = loadFromFile(MAIN_SAVE_LOCATION)
 
 def createEsemeny(date,name,address,price):
     global esemenyek # Globálisan behívjuk a fenti esemenyek változót (tömböt) h tudjuk módosítani is
@@ -21,9 +22,9 @@ def delEsemeny(id):
 
 #debugging
 
-createEsemeny('2077-6-20','ANYUUUUU','valahol a világban',2500)
-createEsemeny('2020-7-5','APUUUUUUU','máshol a világban',3500)
-createEsemeny('2018-8-8','ÉHESVAGYOK','harmadhelyen a világban',10000)
+#createEsemeny('2077-06-20','ANYUUUUU','valahol a világban',2500)
+#createEsemeny('2020-07-05','APUUUUUUU','máshol a világban',3500)
+#createEsemeny('2018-08-08','ÉHESVAGYOK','harmadhelyen a világban',10000)
 
 
 #debugging

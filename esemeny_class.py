@@ -13,5 +13,5 @@ class Esemeny:
         else:
             return False
     def convertToString(self):
-        return ".".join([self.date,self.name,self.address,self.price])
+        return ".".join([self.date,self.name,self.address,str(self.price)])
 
