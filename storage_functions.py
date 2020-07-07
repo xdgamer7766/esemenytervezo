@@ -1,15 +1,20 @@
 from esemeny_class import Esemeny
+ 
 
-def saveToFile(self, filename, esemenyek):
+def saveToFile(filename, esemenyek):
     data = ""
     for i in esemenyek:
         data += i.convertToString()
         data += ';' 
     f = open(filename, 'w')
     f.write(data)
+    f.close()
 
 def loadFromFile(filename):
-    f = open(filename)
+    try:
+        f = open(filename)
+    except:
+        return []        
     # Letisztítjuk a szöveget és eltároljuk a contentben
     content = f.read().strip().replace("\n", "").replace("\r", "")
     # Bezárjuk a fájlhoz való kapcsolatot.
