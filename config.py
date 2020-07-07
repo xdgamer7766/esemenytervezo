@@ -1,2 +1,3 @@
 UI_DASH_COUNT = 75
 UI_DASH_CHARS = '-'
+MAIN_SAVE_LOCATION = "esemenyek.txt"

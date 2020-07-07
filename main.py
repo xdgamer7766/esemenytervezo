@@ -1,6 +1,7 @@
 from esemeny_class import Esemeny
 from storage_functions import saveToFile
 from ui import *
+from config import MAIN_SAVE_LOCATION
 
 esemenyek = []
 
@@ -11,11 +12,12 @@ def createEsemeny(date,name,address,price):
     esemeny = Esemeny(date,name,address,price)
     # Hozzáadjuk az objektumot az esemenyek változóba.
     esemenyek += [esemeny]
+    saveToFile(MAIN_SAVE_LOCATION,esemenyek)
 
-def delEsemeny(id,filename):
+def delEsemeny(id):
     global esemenyek
     del esemenyek[id]
-    #saveToFile(filename, esemenyek)
+    saveToFile(MAIN_SAVE_LOCATION, esemenyek)
 
 #debugging
 
@@ -51,6 +53,8 @@ if fmenu == 1:
     print("debug message")
 if fmenu == 2:
     print(decorateStr(options[fmenu]))
+    delid = input("Adja meg a törlendő esemény sorszámát") -1
+    delEsemeny(delid)
     print("debug message")
 if fmenu == 3:
     print(decorateStr(options[fmenu]))

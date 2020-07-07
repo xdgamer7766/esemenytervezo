@@ -1,6 +1,7 @@
 from esemeny_class import Esemeny
+ 
 
-def saveToFile(self, filename, esemenyek):
+def saveToFile(filename, esemenyek):
     data = ""
     for i in esemenyek:
         data += i.convertToString()
