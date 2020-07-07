@@ -42,8 +42,12 @@ if fmenu == 0:
     print(decorateStr(f"\n{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}\n\t"))   
     print("debug message")
 if fmenu == 1:
-    print(decorateStr(options[fmenu]))
-    
+    print(decorateStr(options[fmenu]))  
+    esemeny_nev = input("Adja meg az esemény nevét")
+    esemeny_idopont = input("Adja meg az esemény időpontját kötőjelekkel elválasztva")
+    esemeny_helyszin = input("Adja meg az esemény helyszínét")
+    esemeny_jegyar = input("Adja meg a jegyárat")
+    createEsemeny(esemeny_idopont,esemeny_nev,esemeny_helyszin,esemeny_jegyar)
     print("debug message")
 if fmenu == 2:
     print(decorateStr(options[fmenu]))
