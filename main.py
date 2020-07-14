@@ -2,6 +2,7 @@ from esemeny_class import Esemeny
 from storage_functions import saveToFile,loadFromFile
 from ui import *
 from config import MAIN_SAVE_LOCATION
+import os
 
 
 esemenyek = loadFromFile(MAIN_SAVE_LOCATION)
@@ -28,49 +29,56 @@ def delEsemeny(id):
 
 
 #debugging
-options = ['Események megtekintése','Esemény hozzáadása','Esemény törlése','Kilépés']
-
-print(getMenuView(options))
-
-fmenu = int(input()) - 1
 
 
 
-#Események megtekintése
-if fmenu == 0:
-    print(decorateStr(options[fmenu]))
-    ujtomb= []   
-    for esemeny in esemenyek:
-       ujtomb += [esemeny.name]    
-    print(getMenuView(ujtomb))
-    print("További információkért írja be az esemény sorszámát")
-    id = int(input())
-    print(decorateStr(f"\n{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}\n\t"))   
-    print("debug message")
 
 
 
-#Esemény hozzáadása
-if fmenu == 1:
-    print(decorateStr(options[fmenu]))  
-    esemeny_nev = input("Adja meg az esemény nevét")
-    esemeny_idopont = input("Adja meg az esemény időpontját kötőjelekkel elválasztva")
-    esemeny_helyszin = input("Adja meg az esemény helyszínét")
-    esemeny_jegyar = input("Adja meg a jegyárat")
-    createEsemeny(esemeny_idopont,esemeny_nev,esemeny_helyszin,esemeny_jegyar)
-    print("debug message")
+while True:
+
+    options = ['Események megtekintése','Esemény hozzáadása','Esemény törlése','Kilépés']
+    print(getMenuView(options))
+    fmenu = int(input()) - 1
+
+    #Események megtekintése
+    if fmenu == 0:
+        print(decorateStr(options[fmenu]))
+        ujtomb= []   
+        for esemeny in esemenyek:
+            ujtomb += [esemeny.name]    
+        print(getMenuView(ujtomb))
+        print("További információkért írja be az esemény sorszámát")
+        id = int(input())
+        print(decorateStr(f"\n{esemenyek[id-1].name}\n\t{esemenyek[id-1].date}\n\t{esemenyek[id-1].address}\n\t{esemenyek[id-1].price}\n\t"))   
+        print("debug message")
 
 
-#Esemény törlése
-if fmenu == 2:
-    print(decorateStr(options[fmenu]))
-    delid = input("Adja meg a törlendő esemény sorszámát") -1
-    delEsemeny(delid)
-    print("debug message")
+
+    #Esemény hozzáadása
+    if fmenu == 1:
+        print(decorateStr(options[fmenu]))  
+        esemeny_nev = input("Adja meg az esemény nevét")
+        esemeny_idopont = input("Adja meg az esemény időpontját kötőjelekkel elválasztva")
+        esemeny_helyszin = input("Adja meg az esemény helyszínét")
+        esemeny_jegyar = input("Adja meg a jegyárat")
+        createEsemeny(esemeny_idopont,esemeny_nev,esemeny_helyszin,esemeny_jegyar)
+        print("debug message")
+
+
+    #Esemény törlése
+    if fmenu == 2:
+        print(decorateStr(options[fmenu]))
+        delid = int(input("Adja meg a törlendő esemény sorszámát")) -1
+        delEsemeny(delid)
+        print("debug message")
 
 
 
-#Kilépés
-if fmenu == 3:
-    print(decorateStr(options[fmenu]))
-    print("debug message")
+    #Kilépés
+    if fmenu == 3:
+        print(decorateStr(options[fmenu]))
+        break
+        print("debug message")
+
+    os.system("PAUSE")   
